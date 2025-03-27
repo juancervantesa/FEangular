@@ -1,0 +1,81 @@
+<section class="ae-container-fluid ae-container-fluid--inner rk-portfolio">
+  <h1 class="ae-u-bolder rk-portfolio-title ">Principales amenazas en el panorama actual</h1>
+  <p class="rk-portfolio-subtitle">El panorama de amenazas cibernéticas evoluciona constantemente. Estas son algunas de
+    las amenazas más comunes y peligrosas que enfrentamos hoy en día:</p>
+</section>
+<div class="ae-container-fluid ae-container-fluid--inner">
+  <mat-form-field appearance="outline">
+    <mat-label>Buscar</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ej. Nombre Amenaza" #input />
+  </mat-form-field>
+
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+      <ng-container matColumnDef="categoriaId">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>categoriaId</th>
+        <td mat-cell *matCellDef="let row">{{ row.categoriaId }}</td>
+      </ng-container>
+      <ng-container matColumnDef="nombreCategoria">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>nombreCategoria</th>
+        <td mat-cell *matCellDef="let row">{{ row.nombre }}</td>
+      </ng-container>
+      <ng-container matColumnDef="amenazaId">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>amenazaId</th>
+        <td mat-cell *matCellDef="let row">{{ row.amenazaId }}</td>
+      </ng-container>
+      <ng-container matColumnDef="titulo">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Titulo</th>
+        <td mat-cell *matCellDef="let row">{{ row.titulo }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Descripcion</th>
+        <td mat-cell *matCellDef="let row">{{ row.descripcion }}</td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="nivelRiesgo">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Nivel de Riesgo</th>
+        <td mat-cell *matCellDef="let row">{{ row.nivelRiesgo }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="fechaPublicacion">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha Publicacion</th>
+        <td mat-cell *matCellDef="let row">{{ row.fechaPublicacion | date:' dd, MMM yyyy' }}</td>
+      </ng-container>
+
+      <!-- Acciones Column -->
+      <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef style="width: 130px;text-align: center; ">
+          <button mat-icon-button color="primary" matTooltip="Adicionar" (click)="openDialogNuevo()">
+            <mat-icon>add_circle</mat-icon>
+          </button>
+        </th>
+        <td mat-cell *matCellDef="let row">
+          <button mat-icon-button color="accent" matTooltip="Editar" (click)="openDialogEditar(row)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" matTooltip="Eliminar" (click)="delete(row)">
+                      <mat-icon>delete</mat-icon>
+                  </button>
+        </td>
+      </ng-container>
+
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">
+          No hay datos que coincidan con la busqueda "{{ input.value }}"
+        </td>
+      </tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  </div>
+
+</div>

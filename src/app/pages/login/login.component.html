@@ -1,0 +1,29 @@
+
+
+<mat-card>
+  <mat-card-content>
+    <form #loginForm="ngForm" action="#" [formGroup]="form" (ngSubmit)="submit()">
+      <h2>Log In</h2>
+
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Usuario" formControlName="usuario" name="username" required>
+
+        <mat-error>
+          Introduzca el usuario
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input matInput type="password" placeholder="Password" formControlName="password" name="password" required>
+
+        <mat-error>
+          Introduzca el password
+        </mat-error>
+      </mat-form-field>
+      <button type="submit" [disabled]="form.invalid"
+              class="btn-disable w-full px-5 py-3 text-base font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 sm:w-full dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+
+
+              Login</button>
+    </form>
+  </mat-card-content>
+</mat-card>

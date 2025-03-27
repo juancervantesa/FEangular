@@ -1,0 +1,52 @@
+<header class="ae-container-fluid ae-container-fluid--full rk-header ">
+  <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+  <label for="mobile-menu">
+    <svg>
+      <use xlink:href="assets/img/symbols.svg#bar"></use>
+    </svg>
+    <svg>
+      <use xlink:href="assets/img/symbols.svg#bar"></use>
+    </svg>
+    <svg>
+      <use xlink:href="assets/img/symbols.svg#bar"></use>
+    </svg>
+  </label>
+  <div class="ae-container-fluid rk-topbar">
+    <h1 class="rk-logo"><a href="index.html">Seguridad <sup>tm</sup></a></h1>
+    <nav class="rk-navigation">
+      <ul class="rk-menu">
+        <li class="rk-menu__item"><a [routerLink]="['']" class="rk-menu__link">Home</a>
+        </li>
+        <li class="rk-menu__item"><a [routerLink]="['./amenazas']" routerLinkActive="rk-menu__link" [routerLinkActiveOptions]="{exact:true}" class="rk-menu__link">Amenazas comunes</a>
+        </li>
+        <li class="rk-menu__item"><a [routerLink]="['./proteccion']" class="rk-menu__link">Métodos de protección</a>
+        </li>
+        <li class="rk-menu__item"><a [routerLink]="['./recursos']" class="rk-menu__link">Recursos y herramientas</a>
+
+        </li>
+        <li class="rk-menu__item"><a [routerLink]="['./contacto']" class="rk-menu__link">Contacto</a>
+        </li>
+
+        <li [@*ngIf]="bandera"  class="active rk-menu__item"><a  class="rk-menu__link">Usuario  {{nombreUsuario}} </a>
+          <nav class="rk-menu__sub">
+            <ul class="rk-container">
+              <li class="rk-menu__item"><a (click)="logOut()" class="rk-menu__link">Cerrar sesión</a></li>
+            </ul>
+          </nav>
+
+        </li>
+
+
+      </ul>
+      <form class="rk-search">
+        <input type="text" placeholder="Search" id="urku-search" class="rk-search-field">
+        <label for="urku-search">
+          <svg>
+            <use xlink:href="assets/img/symbols.svg#icon-search"></use>
+          </svg>
+        </label>
+
+      </form>
+    </nav>
+  </div>
+</header>
