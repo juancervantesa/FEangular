@@ -27,7 +27,7 @@
         <li class="rk-menu__item"><a [routerLink]="['./contacto']" class="rk-menu__link">Contacto</a>
         </li>
 
-        <li [@*ngIf]="bandera"  class="active rk-menu__item"><a  class="rk-menu__link">Usuario  {{nombreUsuario}} </a>
+        <li class="active rk-menu__item"><a  class="rk-menu__link">Usuario  {{nombreUsuario}} </a>
           <nav class="rk-menu__sub">
             <ul class="rk-container">
               <li class="rk-menu__item"><a (click)="logOut()" class="rk-menu__link">Cerrar sesión</a></li>
