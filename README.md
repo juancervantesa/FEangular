@@ -1,59 +1,128 @@
-# FEseguridad
+# Proyecto Frontend - Angular 19
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
+## 📋 Descripción del Proyecto
+Descripción detallada de la aplicación frontend, sus principales características, propósito y funcionalidades.
 
-## Development server
+## 🚀 Tecnologías Utilizadas
+- Angular 19
+- TypeScript
+- RxJS
+- Angular Material (si aplica)
+- Bootstrap / Tailwind CSS (dependiendo de tu diseño)
+- [Otras bibliotecas o herramientas específicas]
 
-To start a local development server, run:
+## 🔧 Requisitos Previos
+- Node.js 20.x o superior
+- Angular CLI 19.x
+- npm 10.x o superior
 
+## 📦 Instalación
+
+### Clonar Repositorio
+```bash
+git clone https://github.com/juancervantesa/FEangular.git
+cd FEangular
+```
+
+### Instalar Dependencias
+```bash
+npm install
+```
+
+## 🛠️ Configuración y Ejecución
+
+### Servidor de Desarrollo
 ```bash
 ng serve
 ```
+Navega a `http://localhost:4200/`. La aplicación se recargará automáticamente si cambias cualquier archivo fuente.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+### Compilación para Producción
 ```bash
-ng generate component component-name
+ng build --configuration=production
+```
+Los artefactos de compilación se almacenarán en el directorio `dist/`.
+
+## 📂 Estructura del Proyecto
+```
+FEangular/
+│
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   ├── services/
+│   │   ├── models/
+│   │   ├── guards/
+│   │   └── interceptors/
+│   ├── assets/
+│   ├── environments/
+│   ├── styles/
+│   └── index.html
+│
+├── angular.json
+├── package.json
+└── tsconfig.json
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🧪 Ejecución de Pruebas
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+### Pruebas Unitarias
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
+### Pruebas End-to-End
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🔐 Configuración de Entornos
+Configuraciones para diferentes entornos en `src/environments/`:
+- `environment.ts`: Entorno de desarrollo
+- `environment.prod.ts`: Entorno de producción
 
-## Additional Resources
+## 🌐 Configuraciones Importantes
+Describe configuraciones específicas como:
+- Interceptores de autenticación
+- Configuración de rutas
+- Servicios principales
+- Estrategias de manejo de estado
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📡 Integraciones
+- Backend API endpoints
+- Servicios externos
+- Librerías de terceros
+
+## 🚀 Despliegue
+Instrucciones específicas para:
+- Despliegue en servidores
+- Configuraciones de hosting
+- Variables de entorno para producción
+
+## 🤝 Contribuciones
+- Guía de contribución
+- Estándares de código
+- Proceso de revisión de pull requests
+
+## 📜 Licencia
+[Tipo de Licencia, por ejemplo MIT]
+
+## 👥 Contacto
+- Nombre del Desarrollador: Juan Cervantes
+- Correo: [tu correo]
+- GitHub: https://github.com/juancervantesa
+
+## 🔍 Notas Adicionales
+- Requisitos específicos
+- Consideraciones de rendimiento
+- Problemas conocidos o limitaciones
+```
+
+Algunos consejos adicionales para tu README de Angular:
+
+1. Personaliza cada sección con detalles específicos de tu proyecto
+2. Incluye capturas de pantalla de la aplicación si es posible
+3. Documenta cualquier configuración especial o pasos de instalación
+4. Mantén el README actualizado con los cambios del proyecto
+
+¿Quieres que ajuste alguna sección o agregue más detalles específicos de tu aplicación Angular?
